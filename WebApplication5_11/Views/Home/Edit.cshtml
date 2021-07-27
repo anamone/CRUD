@@ -1,0 +1,39 @@
+﻿@model WebApplication5_11.Models.student
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form action="/Home/Edit" method="post">
+    <div class="form-group">
+        <input class="form-control" name="id" placeholder="სახელი" style="visibility:hidden" text" value="@Model.id" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Name" placeholder="სახელი" type="text" value="@Model.Name" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Surname" placeholder="გვარი" type="text" value="@Model.Surname" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Age" placeholder="ასაკი" type="number" value="@Model.Age" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Job" placeholder="სამსახური" type="text" value="@Model.Job" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Email" placeholder="ელ.ფოსტა" type="email" value="@Model.Email" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Phone" placeholder="ტელეფონი" type="text" value="@Model.Phone" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="Languages" placeholder="პროგრამირების ენები" type="text" value="@Model.Languages" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-default" />
+    </div>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>
